@@ -1,0 +1,275 @@
+body,
+html {
+  margin: 0;
+  padding: 15px 0;
+  font-family: 'Poppins', sans-serif;
+  /* text-align:center; */
+}
+
+body input, body button
+{
+  outline:none !important;
+  border-color: transparent;
+}
+a{
+  text-decoration: none !important;
+}
+
+#nav, #hero, #main{
+  padding: 0 15px;
+}
+
+.nav-left{
+  flex-grow: 1;
+}
+
+section:not(#nav, #hero){
+  text-align: center;
+}
+
+#nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+#hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  ;
+}
+
+/* .content-holder {
+  text-align: center;
+} */
+
+.cta a {
+  padding: 10px 30px;
+  background-color: hsl(180, 66%, 49%);
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.image-holder img {
+  width: 100vw;
+}
+
+.cta {}
+
+#main {
+
+
+}
+
+#main .container-form {
+
+  padding: 22px;
+  /* background-image: url('images/bg-shorten-mobile.svg'); */
+  background-size: cover;
+  border-radius: 4px;
+  background-repeat: repeat-x;
+}
+
+#form-shorten input,
+form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#form-shorten button {
+  text-align: center;
+  margin-top: 5px;
+  color: #fff;
+  background-color: hsl(180, 66%, 49%);
+}
+
+.card {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding:10px;
+  height:250px;
+  border-radius:4px;
+}
+
+.card-content{
+  color: hsl(257, 7%, 63%);
+  line-height:25px;
+}
+#features {
+  /* background-color: hsl(257, 7%, 63%); */
+  background-color: hsl(0, 0%, 75%);
+  padding:135px 35px 35px;
+}
+
+.separator-container {
+  /* width: 20px; */
+  height: 40px;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separator {
+  width: 40px;
+  margin: 0 auto;
+  height: 10px;
+  background-color: aqua;
+  transform: rotate(90deg);
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+    padding: 30px;
+  border-radius: 50%;
+  background-color: hsl(260, 8%, 14%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left:-5px;
+
+}
+
+.icon img{
+  width:30px;
+}
+
+.card .icon, .heading, .card-content{
+  position: relative;
+    top: -60px;
+}
+
+.card .icon{
+  top:-80px;
+}
+
+.cards-container{
+  margin-top:90px;
+}
+
+.two{
+  margin-top:40px;
+}
+.three{
+  margin-top:80px;
+}
+
+@media (min-width: 769px) {
+
+  section#features{
+    text-align: left;
+  }
+
+  #features .header{
+    text-align: center;
+  }
+  #hero .container {
+    flex-direction: row-reverse;
+  }
+
+  #hero .content-holder{
+    flex-grow:1;
+  }
+
+  .image-holder{
+    width:50%;
+  }
+
+  .image-holder img{
+    width:auto;
+  }
+  #form-shorten {
+    display:flex;
+    justify-content: space-between;
+    padding:15px 15px 0;
+  }
+
+  #form-shorten button{
+    width:250px;
+    margin-left:15px;
+    flex-grow:0;
+  }
+
+  .cards-container{
+    display:flex;
+  }
+  .separator-container{
+    transform: rotate(90deg);
+    margin-top: 12%;
+  }
+
+  .card{
+    align-items:flex-start;
+    padding: 80px 10px 10px 35px;
+  }
+
+  #container-output .result{
+    display:flex;
+    background-color: #fff;
+    justify-content: space-between;
+    padding:10px;
+    margin-top:10px;
+  }
+
+  .result p{
+    flex-grow:1;
+    text-align:left;
+  }
+
+  .result a{
+    color:hsl(180, 66%, 49%);
+    text-align: right;
+  }
+
+  #container-output .result button{
+    margin-left:20px;
+    color:#fff;
+    background-color: hsl(180, 66%, 49%);
+    padding:7px 30px;
+    border-radius:4px;
+    outline:none;
+    border-color:transparent;
+  }
+
+  #main{
+    position: relative;
+    top: 50px;
+  }
+
+  #main #error-msg{
+    color:red;
+    font-style: italic;
+    font-size:12px;
+    padding-left:15px;
+    text-align:left;
+  }
+
+  .hidden{
+    display:none;
+  }
+
+  .cta a:hover, #form-shorten button:hover{
+    background-color: rgba(42,207,207,.6);
+  }
+
+  .nav-left a, .nav-right a{
+    color:hsl(0, 0%, 75%);
+    margin-left:20px;
+
+  }
+
+  .nav-left a:hover, .nav-right a:hover{
+    color: hsl(260, 8%, 14%);
+  }
+
+}
