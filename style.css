@@ -409,8 +409,8 @@ form button {
   }
 
   #container-output .result button {
-    width: auto;
-    margin: 0;
+    width: 105px;
+    margin: 0 10px;
   }
 
   .result p {
