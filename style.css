@@ -1,7 +1,7 @@
 body,
 html {
   margin: 0;
-  padding: 15px 0;
+  padding: 15px 0 0;
   font-family: 'Poppins', sans-serif;
   /* text-align:center; */
 }
@@ -352,8 +352,6 @@ form button {
 
   .image-holder {
     width: 50%;
-
-
   }
 
   .image-holder img {
@@ -382,9 +380,6 @@ form button {
   .image-holder {
     margin-right: -150px;
   }
-
-
-
   .cards-container {
     display: flex;
   }
@@ -409,7 +404,7 @@ form button {
   }
 
   #container-output .result button {
-    width: 105px;
+    width: 118px;
     margin: 0 10px;
   }
 
@@ -417,11 +412,6 @@ form button {
     flex-grow: 1;
     text-align: left;
   }
-
-
-
-
-
   #main #error-msg {
     color: red;
     font-style: italic;
@@ -450,20 +440,12 @@ form button {
   .nav-right a:hover {
     color: hsl(260, 8%, 14%);
   }
-
-
   .content-holder .text {
     padding-right: 180px;
   }
-
-
-
   #get-started {
     background-image: url('images/bg-boost-desktop.svg');
   }
-
-
-
   #footer .container {
     flex-direction: row;
   }
