@@ -6,24 +6,31 @@ html {
   /* text-align:center; */
 }
 
-body input, body button
-{
-  outline:none !important;
+body input,
+body button {
+  outline: none !important;
   border-color: transparent;
 }
-a{
+
+a {
   text-decoration: none !important;
 }
 
-#nav, #hero, #main{
+#nav,
+#hero,
+#main {
   padding: 0 15px;
 }
 
-.nav-left{
+#hero {
+  padding-top: 33px;
+}
+
+.nav-left {
   flex-grow: 1;
 }
 
-section:not(#nav, #hero){
+section:not(#nav, #hero) {
   text-align: center;
 }
 
@@ -32,8 +39,25 @@ section:not(#nav, #hero){
   justify-content: space-between;
 }
 
-.logo {
+#nav .logo {
   flex-grow: 1;
+}
+
+.menu-expanded-mob {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: hsl(260, 8%, 14%);
+  border-radius: 4px;
+  padding: 50px 15px;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.menu-expanded-item {
+  margin-bottom: 40px;
 }
 
 #hero .container {
@@ -55,6 +79,25 @@ section:not(#nav, #hero){
   text-decoration: none;
 }
 
+.menu-expanded-mob .cta {
+  width: 100%;
+  margin-top: 0;
+}
+
+.menu-expanded-mob .cta a {
+  text-align: center;
+  display: block;
+}
+
+.content-holder {
+  text-align: center;
+}
+
+.image-holder {
+  overflow: hidden;
+  margin-right: -28px;
+}
+
 .image-holder img {
   width: 100vw;
 }
@@ -62,8 +105,8 @@ section:not(#nav, #hero){
 .cta {}
 
 #main {
-
-
+  position: relative;
+  top: 60px;
 }
 
 #main .container-form {
@@ -84,7 +127,7 @@ form button {
 
 #form-shorten button {
   text-align: center;
-  margin-top: 5px;
+  margin-top: 18px;
   color: #fff;
   background-color: hsl(180, 66%, 49%);
 }
@@ -95,19 +138,32 @@ form button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding:10px;
-  height:250px;
-  border-radius:4px;
+  padding: 10px;
+  height: 250px;
+  border-radius: 4px;
 }
 
-.card-content{
-  color: hsl(257, 7%, 63%);
-  line-height:25px;
+#container-output .result {
+
+
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 17px;
+  align-items: flex-start;
+  flex-direction: column;
 }
+
+.card-content {
+  color: hsl(257, 7%, 63%);
+  line-height: 25px;
+}
+
 #features {
   /* background-color: hsl(257, 7%, 63%); */
   background-color: hsl(0, 0%, 94%);
-  padding:135px 35px 90px;
+  padding: 135px 35px 90px;
 }
 
 .separator-container {
@@ -130,171 +186,290 @@ form button {
 .icon {
   width: 80px;
   height: 80px;
-    padding: 30px;
+  padding: 30px;
   border-radius: 50%;
   background-color: hsl(260, 8%, 14%);
   display: flex;
   justify-content: center;
   align-items: center;
-  left:-5px;
+  left: -5px;
 
 }
 
-.icon img{
-  width:30px;
+.icon img {
+  width: 30px;
 }
 
-.card .icon, .heading, .card-content{
+.card .icon,
+.heading,
+.card-content {
   position: relative;
-    top: -60px;
+  top: -60px;
 }
 
-.card .icon{
-  top:-80px;
+.card .icon {
+  top: -80px;
 }
 
-.cards-container{
-  margin-top:110px;
+.cards-container {
+  margin-top: 110px;
 }
 
-.two{
-  margin-top:40px;
+.two {
+  margin-top: 80px;
 }
-.three{
-  margin-top:80px;
+
+.three {
+  margin-top: 80px;
 }
-.content-holder h1{
+
+.content-holder h1 {
   font-size: 52px;
   font-weight: bold;
 }
 
-.content-holder p, #features .header p{
-  color:hsl(257, 7%, 63%);
+.content-holder p,
+#features .header p {
+  color: hsl(257, 7%, 63%);
 }
 
-#features .header p{
+.result a {
+  color: hsl(180, 66%, 49%);
+  text-align: right;
+}
+
+#container-output .result button {
+  margin-left: 20px;
+  color: #fff;
+  background-color: hsl(180, 66%, 49%);
+  padding: 7px 30px;
+  border-radius: 4px;
+  outline: none;
+  border-color: transparent;
+  width: 100%;
+  margin: 10px auto 0;
+}
+
+#container-output .result hr,
+.menu-expanded-mob hr {
+  background-color: hsl(0, 0%, 75%);
+  width: 100%;
+  /* height:1px; */
+}
+
+#features .header p {
   line-height: 26px;
+}
+
+.content-holder .text {
+  line-height: 26px;
+}
+
+.fill-color {
+  width: 100vw;
+  height: 500px;
+  background-color: hsl(0, 0%, 94%);
+  position: absolute;
+  top: 64px;
+  z-index: -1;
+  margin-left: -15px;
+}
+
+
+#features .header h2 {
+  margin-bottom: 20px;
+}
+
+#get-started {
+  background-image: url('images/bg-boost-mobile.svg');
+  background-size: cover;
+  padding: 70px 0 80px;
+}
+
+.cta {
+  margin-top: 52px;
+}
+
+#get-started h2 {
+  color: #fff;
+
+}
+
+#footer {
+  padding: 56px 0;
+  color: #fff;
+  background-color: hsl(260, 8%, 14%);
+}
+
+.footer-logo a {
+  color: #fff;
+}
+
+.social-media img {
+  margin-right: 15px;
+}
+
+#footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#footer .header {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#footer .container div {
+  margin-bottom: 15px;
 }
 
 /****************************MEDIA QUERIES********************/
 
 @media (min-width: 769px) {
 
-  section#features{
+  section#features {
     text-align: left;
   }
 
-  #features .header{
+  .menu-expanded-mob {
+    display: none;
+  }
+
+  #features .header {
     text-align: center;
   }
+
   #hero .container {
     flex-direction: row-reverse;
   }
 
-  #hero .content-holder{
-    flex-grow:1;
-    padding-top:40px;
+  #hero .content-holder {
+    flex-grow: 1;
+    padding-top: 40px;
+    text-align: left;
   }
 
-  .image-holder{
-    width:50%;
+  .image-holder {
+    width: 50%;
+
+
   }
 
-  .image-holder img{
-    width:auto;
+  .image-holder img {
+    width: auto;
     position: relative;
     z-index: -1;
   }
+
   #form-shorten {
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    padding:15px;
+    padding: 15px;
   }
 
-  #form-shorten button{
-    width:250px;
-    margin-left:15px;
-    flex-grow:0;
+  #form-shorten button {
+    width: 250px;
+    margin-left: 15px;
+    flex-grow: 0;
+    margin-top: 0;
   }
 
-  .cta{
-    margin-top:40px;
+  #container-output .result hr {
+    display: none;
   }
 
-  .cards-container{
-    display:flex;
+  .image-holder {
+    margin-right: -150px;
   }
-  .separator-container{
+
+
+
+  .cards-container {
+    display: flex;
+  }
+
+  .separator-container {
     transform: rotate(90deg);
     margin-top: 12%;
   }
 
-  .card{
-    align-items:flex-start;
+  .two {
+    margin-top: 40px;
+  }
+
+  .card {
+    align-items: flex-start;
     padding: 80px 10px 10px 35px;
   }
 
-  #container-output .result{
-    display:flex;
-    background-color: #fff;
-    justify-content: space-between;
-    padding:10px;
-    margin-top:10px;
+  #container-output .result {
+    flex-direction: row;
+    align-items: center;
   }
 
-  .result p{
-    flex-grow:1;
-    text-align:left;
+  #container-output .result button {
+    width: auto;
+    margin: 0;
   }
 
-  .result a{
-    color:hsl(180, 66%, 49%);
-    text-align: right;
+  .result p {
+    flex-grow: 1;
+    text-align: left;
   }
 
-  #container-output .result button{
-    margin-left:20px;
-    color:#fff;
-    background-color: hsl(180, 66%, 49%);
-    padding:7px 30px;
-    border-radius:4px;
-    outline:none;
-    border-color:transparent;
-  }
 
-  #main{
-    position: relative;
-    top: 60px;
-  }
 
-  #main #error-msg{
-    color:red;
+
+
+  #main #error-msg {
+    color: red;
     font-style: italic;
-    font-size:12px;
-    padding-left:15px;
-    text-align:left;
+    font-size: 12px;
+    padding-left: 15px;
+    text-align: left;
   }
 
-  .hidden{
-    display:none;
+  .hidden {
+    display: none;
   }
 
-  .cta a:hover, #form-shorten button:hover{
-    background-color: rgba(42,207,207,.6);
+  .cta a:hover,
+  #form-shorten button:hover {
+    background-color: rgba(42, 207, 207, .6);
   }
 
-  .nav-left a, .nav-right a{
-    color:hsl(0, 0%, 75%);
-    margin-left:20px;
+  .nav-left a,
+  .nav-right a {
+    color: hsl(0, 0%, 75%);
+    margin-left: 20px;
 
   }
 
-  .nav-left a:hover, .nav-right a:hover{
+  .nav-left a:hover,
+  .nav-right a:hover {
     color: hsl(260, 8%, 14%);
   }
 
-  #features .header h2{
-    margin-bottom:20px;
+
+  .content-holder .text {
+    padding-right: 180px;
+  }
+
+
+
+  #get-started {
+    background-image: url('images/bg-boost-desktop.svg');
+  }
+
+
+
+  #footer .container {
+    flex-direction: row;
+  }
+
+  .footer-col {
+    text-align: left;
   }
 
 }
