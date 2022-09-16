@@ -286,7 +286,7 @@ form button {
   padding: 70px 0 80px;
 }
 
-.content-holder .cta {
+.content-holder .cta, #get-started .cta {
   margin-top: 52px;
 }
 
