@@ -5,6 +5,7 @@ document.querySelector('#form-shorten').addEventListener('submit', (event) => {
   const link = document.querySelector('#input-url').value;
   const errorMsg = document.querySelector('#main span');
   event.preventDefault();
+  document.querySelector('#input-url').style.border = "none";
 
   if (link.length === 0) {
     console.log("right");
@@ -40,9 +41,14 @@ const displayShortlink = (link, shortLink) => {
   const copyBtn = document.querySelectorAll('.btn-copy');
 
   copyBtn.forEach((item) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (event) => {
+      const urlSelect = event.currentTarget.closest('div.result').querySelector('a').innerText;
+      console.log(urlSelect);
+      navigator.clipboard.writeText(urlSelect);
+
       item.innerText = "Copied!";
       item.style.backgroundColor = 'hsl(260, 8%, 14%)';
+
     });
   });
 
@@ -51,3 +57,10 @@ const displayShortlink = (link, shortLink) => {
 document.querySelector('.menu.visible-xs').addEventListener("click", () => {
   document.querySelector('.menu-expanded-mob').classList.toggle('hidden');
 });
+
+// const copyUrl = document.querySelectorAll('.btn-copy');
+
+
+// document.querySelector('.menu.visible-xs').addEventListener("click", () => {
+//   document.querySelector('.menu-expanded-mob').classList.toggle('hidden');
+// });
