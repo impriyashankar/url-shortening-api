@@ -8,20 +8,30 @@ document.querySelector('#form-shorten').addEventListener('submit', (event) => {
   document.querySelector('#input-url').style.border = "none";
 
   if (link.length === 0) {
-    console.log("right");
     errorMsg.classList.remove('hidden');
     document.querySelector('#input-url').style.border = "2px solid red";
   }
   else {
 
-    const url = `https://api.shrtco.de/v2/shorten?url=${link}`;
+    // const url = `https://api.shrtco.de/v2/shorten?url=${link}`;
 
+    const apiKey = "91df9b46bf1d41d3a884d68b2b3ddbd7";
+    const headers = { Accept: "application/json", "Content-Type": "application/json", apikey: apiKey }
+    const requestOptions = {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify({destination: link})
+  };
     errorMsg.classList.add('hidden');
 
+    // fetch(url)
+    //   .then((response) => response.json())
+    //   .then((data) => displayShortlink(link, data.result.short_link));
 
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => displayShortlink(link, data.result.short_link));
+    fetch("https://api.rebrandly.com/v1/links", requestOptions)
+    .then((response) => response.json())
+    .then((data) => displayShortlink(link, data.shortUrl))
+    .catch(error => console.log('error', error));
   }
 
 });
